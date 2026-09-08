@@ -191,22 +191,108 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ===== 5. CONTACT FORM HANDLER =====
+    // ===== 5. CONTACT FORM HANDLER (Web3Forms) =====
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name')?.value || '';
-            const email = document.getElementById('email')?.value || '';
-            const subject = document.getElementById('subject')?.value || 'Portfolio Contact';
-            const message = document.getElementById('message')?.value || '';
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const submitBtnDefaultHtml = submitBtn ? submitBtn.innerHTML : '';
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            const mailtoUri = `mailto:nareshkumarkc25@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\nMessage:\n${message}`)}`;
-            
-            showToast('Opening your email client to send message...');
-            setTimeout(() => {
-                window.location.href = mailtoUri;
-            }, 600);
+        const fieldRules = {
+            name: { min: 2, max: 100, label: 'Please enter your name (at least 2 characters).' },
+            email: { min: 1, max: 150, label: 'Please enter a valid email address.' },
+            'inquiry_subject': { min: 4, max: 150, label: 'Subject should be at least 4 characters.' },
+            message: { min: 15, max: 3000, label: 'Message should be at least 15 characters — a couple of sentences is plenty.' }
+        };
+
+        function setFieldError(input, message) {
+            input.classList.toggle('invalid', Boolean(message));
+            const errorEl = document.getElementById(`${input.id}-error`);
+            if (errorEl) errorEl.textContent = message || '';
+        }
+
+        // Clear a field's error state as soon as the visitor starts fixing it
+        contactForm.querySelectorAll('.form-input, .form-textarea').forEach(input => {
+            input.addEventListener('input', () => setFieldError(input, ''));
+        });
+
+        function validateForm() {
+            let firstInvalid = null;
+
+            contactForm.querySelectorAll('.form-input, .form-textarea').forEach(input => {
+                const rule = fieldRules[input.name];
+                if (!rule) return;
+
+                const value = input.value.trim();
+                let message = '';
+
+                if (!value) {
+                    message = 'This field is required.';
+                } else if (input.name === 'email' && !emailPattern.test(value)) {
+                    message = rule.label;
+                } else if (value.length < rule.min) {
+                    message = rule.label;
+                } else if (value.length > rule.max) {
+                    message = `Please keep this under ${rule.max} characters.`;
+                }
+
+                setFieldError(input, message);
+                if (message && !firstInvalid) firstInvalid = input;
+            });
+
+            return firstInvalid;
+        }
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Honeypot: a filled-in hidden checkbox means a bot filled the form
+            const botcheck = contactForm.querySelector('[name="botcheck"]');
+            if (botcheck && botcheck.checked) return;
+
+            const firstInvalid = validateForm();
+            if (firstInvalid) {
+                showToast('Please fix the highlighted field before sending.');
+                firstInvalid.focus();
+                return;
+            }
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            }
+
+            const payload = Object.fromEntries(new FormData(contactForm).entries());
+            // Build a clear, branded email subject line while keeping the visitor's
+            // own subject visible as its own labeled row in the email body.
+            payload.subject = `Portfolio Contact: ${payload.inquiry_subject}`;
+            payload.page_url = window.location.href;
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    showToast('Message sent! I will get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    showToast('Something went wrong. Please email me directly instead.');
+                }
+            } catch (err) {
+                showToast('Network error. Please email me directly instead.');
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = submitBtnDefaultHtml;
+                }
+            }
         });
     }
 

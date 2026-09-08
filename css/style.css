@@ -26,7 +26,10 @@
     
     --accent-emerald: #10b981;
     --accent-emerald-glow: rgba(16, 185, 129, 0.3);
-    
+
+    --accent-rose: #f43f5e;
+    --accent-rose-glow: rgba(244, 63, 94, 0.25);
+
     --accent-amber: #f59e0b;
     
     /* Text Colors */
@@ -1469,6 +1472,19 @@ code, pre, .mono {
 .form-textarea {
     resize: vertical;
     min-height: 120px;
+}
+
+.form-input.invalid, .form-textarea.invalid {
+    border-color: var(--accent-rose);
+    box-shadow: 0 0 0 3px var(--accent-rose-glow);
+}
+
+.field-error {
+    display: block;
+    min-height: 18px;
+    margin-top: 6px;
+    font-size: 0.78rem;
+    color: var(--accent-rose);
 }
 
 /* ===== FOOTER ===== */

@@ -3,591 +3,981 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naresh Kumar KC | Python & Django Developer</title>
+    <title>Naresh Kumar K.C. | Backend Developer — Python, Django, REST APIs</title>
+    <meta name="description" content="Naresh Kumar K.C. is a Backend Developer specializing in Python, Django, Django REST Framework, PostgreSQL, Linux VPS deployments, and security testing (Burp Suite, OWASP ZAP).">
+    <meta name="keywords" content="Naresh Kumar K.C., Backend Developer, Python Developer, Django Developer, Django REST Framework, PostgreSQL, FastAPI, Linux VPS, Nginx, OWASP, Nepal Developer">
+    <meta name="author" content="Naresh Kumar K.C.">
+    <meta property="og:title" content="Naresh Kumar K.C. | Backend Developer">
+    <meta property="og:description" content="Backend developer with production experience building and deploying Django & DRF applications, Linux VPS hosting, and OWASP security hardening.">
+    <meta property="og:type" content="website">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="images/logon.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="images/logon.jpg">
     <link rel="apple-touch-icon" href="images/logon.jpg">
 </head>
 <body>
+
+    <!-- Toast Notification Element -->
+    <div id="toast" class="toast-msg">
+        <i class="fas fa-check-circle" style="color: var(--accent-emerald);"></i>
+        <span id="toast-text">Copied to clipboard!</span>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">Naresh<span>.dev</span></a>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#resume" class="nav-link">Resume</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="#home" class="nav-brand">
+                    Naresh<span class="dot">.dev</span>
+                    <span class="brand-badge">BACKEND</span>
+                </a>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#resume" class="nav-link">Resume</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="greeting">Hello, I'm</p>
-                <h1 class="name">Naresh Kumar K.C.</h1>
-                <h2 class="title">
-                    <span class="typing-text" id="typing-text"></span>
-                    <span class="cursor">|</span>
-                </h2>
-                <p class="description">
-                    Passionate Python & Django developer focused 
-                    on building scalable backend systems and REST APIs. 
-                    Skilled in writing clean, production-quality code and 
-                    eager to grow professionally.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <i class="fas fa-code"></i> View Projects
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-envelope"></i> Hire Me
-                    </a>
+                <div class="nav-cta">
+                    <button class="btn btn-resume btn-sm open-resume-trigger" id="nav-resume-btn">
+                        <i class="fas fa-file-lines"></i> Resume
+                    </button>
+                    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-                <div class="social-links">
-                    <a href="https://github.com/kcNares" target="_blank" title="GitHub">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    
+                    <!-- Left Column: Intro -->
+                    <div class="hero-left">
+                        <div class="status-badge">
+                            <span class="ping-dot"></span>
+                            <span>Available Immediately &middot; On-site / Hybrid / Remote</span>
+                        </div>
+
+                        <p class="hero-greeting">Hi, I'm</p>
+                        <h1 class="hero-name">Naresh Kumar K.C.</h1>
+                        
+                        <div class="hero-title-box">
+                            <span>I build</span>
+                            <span class="typing-text" id="typing-text">Backend Systems & APIs</span>
+                            <span class="cursor-blink">|</span>
+                        </div>
+
+                        <p class="hero-bio">
+                            <strong>Backend Developer</strong> specializing in architecting and shipping scalable, secure 
+                            <strong>Django &amp; Django REST Framework</strong> APIs. Proficient in designing complex 
+                            <strong>PostgreSQL</strong> relational schemas, implementing robust <strong>Role-Based Access Control (RBAC)</strong>, 
+                            and hardening endpoints against <strong>OWASP</strong> vulnerabilities. Experienced in deploying production-ready 
+                            services to <strong>Linux VPS (Nginx, Gunicorn, Docker)</strong> with seamless <strong>React &amp; Next.js</strong> integration.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a href="#projects" class="btn btn-primary">
+                                <i class="fas fa-layer-group"></i> Explore Projects
+                            </a>
+                            <button class="btn btn-secondary open-resume-trigger">
+                                <i class="fas fa-file-invoice"></i> View Resume
+                            </button>
+                            <a href="#contact" class="btn btn-outline">
+                                <i class="fas fa-paper-plane"></i> Get In Touch
+                            </a>
+                        </div>
+
+                        <div class="hero-social">
+                            <a href="https://github.com/kcNares" target="_blank" class="social-icon-btn" title="GitHub Profile">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:nareshkumarkc25@gmail.com" class="social-icon-btn" title="Email Naresh">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="tel:+9779840790473" class="social-icon-btn" title="Call Naresh">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                            <a href="https://wa.me/9779840790473" target="_blank" class="social-icon-btn" title="Chat on WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Interactive Backend Terminal Showcase -->
+                    <div class="hero-right">
+                        <div class="terminal-card">
+                            <div class="terminal-header">
+                                <div class="terminal-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <span class="terminal-title">naresh_api_service.py</span>
+                                <span style="font-size:0.75rem; color:var(--accent-emerald);"><i class="fas fa-shield-halved"></i> OWASP Hardened</span>
+                            </div>
+                            <div class="terminal-body">
+<span class="code-comment"># Production Django REST Framework Endpoint</span>
+<span class="code-keyword">from</span> rest_framework.views <span class="code-keyword">import</span> APIView
+<span class="code-keyword">from</span> rest_framework.response <span class="code-keyword">import</span> Response
+<span class="code-keyword">from</span> rest_framework.permissions <span class="code-keyword">import</span> IsAuthenticated
+<span class="code-keyword">from</span> core.permissions <span class="code-keyword">import</span> RoleBasedAccessControl
+
+<span class="code-keyword">class</span> <span class="code-class">BookingDashboardAPI</span>(APIView):
+    <span class="code-prop">permission_classes</span> = [IsAuthenticated, RoleBasedAccessControl]
+
+    <span class="code-keyword">def</span> <span class="code-fn">get</span>(<span class="code-prop">self</span>, request):
+        <span class="code-comment"># Optimized PostgreSQL query with state prevention</span>
+        data = request.user.get_role_scoped_metrics()
+        <span class="code-keyword">return</span> Response({
+            <span class="code-str">"developer"</span>: <span class="code-str">"Naresh Kumar K.C."</span>,
+            <span class="code-str">"focus"</span>: <span class="code-str">"Python | Django | REST APIs | Linux VPS"</span>,
+            <span class="code-str">"security_status"</span>: <span class="code-str">"Burp Suite & OWASP Tested (Passed)"</span>,
+            <span class="code-str">"status"</span>: <span class="code-str">"Active & Ready to Deploy"</span>
+        })
+                            </div>
+                            <div class="terminal-footer-stats">
+                                <div class="stat-item">
+                                    <span class="stat-val">DRF & APIs</span>
+                                    <span class="stat-label">REST Architecture</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-val">VPS + Nginx</span>
+                                    <span class="stat-label">Linux Deployment</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-val">OWASP & RBAC</span>
+                                    <span class="stat-label">Security Hardened</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-user-gear"></i> Profile Overview</span>
+                    <h2 class="section-title">Engineering Reliable Backend Systems</h2>
+                    <p class="section-subtitle">
+                        Building clean REST APIs, robust relational databases, and secure deployment pipelines.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-card">
+                        <h3><i class="fas fa-terminal" style="color: var(--primary-light);"></i> Summary & Background</h3>
+                        <p>
+                            I am a backend developer with hands-on production experience designing, building, and deploying 
+                            <strong>Django</strong> and <strong>Django REST Framework</strong> applications. I completed a paid backend 
+                            internship at <strong>AI Education and Technologies</strong>, where I developed role-based booking 
+                            and dashboard systems, configured Linux VPS deployments with Nginx and Gunicorn, and conducted security testing.
+                        </p>
+                        <p>
+                            As a <strong>BCA graduate from Kathford International College of Engineering & Management</strong> (2020–2025) 
+                            with specialized training from Broadway Infosys, I combine academic computer science fundamentals with practical, 
+                            real-world engineering workflows.
+                        </p>
+
+                        <ul class="key-highlights-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span><strong>Backend Engineering:</strong> Django, Django REST Framework, FastAPI, Node.js, and clean RESTful API design.</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span><strong>Database Architecture:</strong> PostgreSQL schema design, Redis caching, SQLite, and Django ORM optimization.</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span><strong>DevOps & Security:</strong> Linux VPS configuration, Nginx reverse proxy, Gunicorn, Docker, Burp Suite, and OWASP ZAP.</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span><strong>Frontend Integration:</strong> Comfortable moving into React, Next.js, and Tailwind CSS to ensure smooth API handoffs.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="about-cards-column">
+                        <div class="feature-mini-card">
+                            <div class="feature-icon-box">
+                                <i class="fas fa-shield-cat"></i>
+                            </div>
+                            <div>
+                                <h4>Security-First Mindset</h4>
+                                <p>Trained in OWASP Top 10 vulnerabilities, CSRF/XSS mitigation, secure cookie handling, and proactive penetration testing with Burp Suite and OWASP ZAP.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-mini-card">
+                            <div class="feature-icon-box">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <div>
+                                <h4>Linux VPS & Production Hosting</h4>
+                                <p>Direct experience provisioning Linux VPS environments, configuring Gunicorn service daemons, setting up Nginx reverse proxy servers, and managing SSL certificates.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-mini-card">
+                            <div class="feature-icon-box">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div>
+                                <h4>Relational Data Modeling</h4>
+                                <p>Designing structured PostgreSQL schemas for complex business rules like state transitions, role hierarchies, and double-booking prevention.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-briefcase"></i> Track Record</span>
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-subtitle">
+                        Production engineering experience building scalable backend platforms.
+                    </p>
+                </div>
+
+                <div class="experience-card-main">
+                    <div class="exp-header">
+                        <div>
+                            <h3 class="exp-role-title">Backend Developer Intern</h3>
+                            <div class="exp-company">
+                                <i class="fas fa-building"></i> AI Education and Technologies
+                            </div>
+                        </div>
+                        <div class="exp-meta-badges">
+                            <span class="meta-pill primary"><i class="fas fa-calendar-check"></i> June 07, 2026 – September 06, 2026</span>
+                            <span class="meta-pill"><i class="fas fa-location-dot"></i> Kathmandu, Nepal</span>
+                            <span class="meta-pill"><i class="fas fa-clock"></i> Paid Internship</span>
+                        </div>
+                    </div>
+
+                    <ul class="exp-bullet-list">
+                        <li>
+                            <i class="fas fa-circle-check"></i>
+                            <span>Built and maintained REST APIs in <strong>Django and Django REST Framework</strong> for core booking and dashboard systems, serving web and mobile application clients across multiple user roles.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle-check"></i>
+                            <span>Implemented <strong>Role-Based Access Control (RBAC)</strong> and authentication flows separating admin, staff, and customer permissions, preventing unauthorized access to restricted API endpoints.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle-check"></i>
+                            <span>Designed relational database schemas in <strong>PostgreSQL</strong> for booking and availability logic, including state transitions and double-booking prevention mechanisms.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle-check"></i>
+                            <span>Deployed and maintained production applications on <strong>Linux VPS using Nginx and Gunicorn</strong>, configuring custom domains, SSL certificates, environment variables, and release automation.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle-check"></i>
+                            <span>Ran security assessments with <strong>Burp Suite and OWASP ZAP</strong> against internal applications, identifying and remediating issues including broken access control, insecure headers, and CSRF gaps prior to release.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle-check"></i>
+                            <span>Developed frontend interfaces in <strong>React / Next.js / Django templates</strong> to integrate directly with backend APIs, minimizing handoff delays between teams.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle-check"></i>
+                            <span>Collaborated closely in code reviews and Git-based workflows, contributing merged pull requests across Agile sprint cycles.</span>
+                        </li>
+                    </ul>
+
+                    <div class="exp-tech-tags">
+                        <span class="tech-tag-chip">Python</span>
+                        <span class="tech-tag-chip">Django</span>
+                        <span class="tech-tag-chip">Django REST Framework</span>
+                        <span class="tech-tag-chip">PostgreSQL</span>
+                        <span class="tech-tag-chip">Linux VPS</span>
+                        <span class="tech-tag-chip">Nginx</span>
+                        <span class="tech-tag-chip">Gunicorn</span>
+                        <span class="tech-tag-chip">Burp Suite</span>
+                        <span class="tech-tag-chip">OWASP ZAP</span>
+                        <span class="tech-tag-chip">React / Next.js</span>
+                        <span class="tech-tag-chip">Git / GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-code"></i> Tech Stack</span>
+                    <h2 class="section-title">Technical Skills & Competencies</h2>
+                    <p class="section-subtitle">
+                        Comprehensive toolkit spanning backend frameworks, databases, cloud infrastructure, and security.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    
+                    <!-- Category 1: Languages -->
+                    <div class="skill-category-card">
+                        <div class="category-card-header">
+                            <div class="category-icon-wrap icon-lang">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Languages</h3>
+                        </div>
+                        <div class="skill-pills-wrap">
+                            <span class="skill-pill"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-pill"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="skill-pill"><i class="fas fa-code"></i> TypeScript</span>
+                            <span class="skill-pill"><i class="fas fa-database"></i> SQL</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Backend -->
+                    <div class="skill-category-card">
+                        <div class="category-card-header">
+                            <div class="category-icon-wrap icon-backend">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3>Backend & APIs</h3>
+                        </div>
+                        <div class="skill-pills-wrap">
+                            <span class="skill-pill"><i class="fas fa-cubes"></i> Django</span>
+                            <span class="skill-pill"><i class="fas fa-network-wired"></i> Django REST Framework</span>
+                            <span class="skill-pill"><i class="fas fa-bolt"></i> FastAPI</span>
+                            <span class="skill-pill"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="skill-pill"><i class="fas fa-sitemap"></i> REST API Design</span>
+                            <span class="skill-pill"><i class="fas fa-link"></i> Django ORM</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Databases -->
+                    <div class="skill-category-card">
+                        <div class="category-card-header">
+                            <div class="category-icon-wrap icon-db">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Databases</h3>
+                        </div>
+                        <div class="skill-pills-wrap">
+                            <span class="skill-pill"><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span class="skill-pill"><i class="fas fa-memory"></i> Redis</span>
+                            <span class="skill-pill"><i class="fas fa-table"></i> SQLite</span>
+                            <span class="skill-pill"><i class="fas fa-diagram-project"></i> Relational Data Modelling</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: Infrastructure & DevOps -->
+                    <div class="skill-category-card">
+                        <div class="category-card-header">
+                            <div class="category-icon-wrap icon-infra">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h3>Infrastructure & DevOps</h3>
+                        </div>
+                        <div class="skill-pills-wrap">
+                            <span class="skill-pill"><i class="fab fa-linux"></i> Linux VPS</span>
+                            <span class="skill-pill"><i class="fas fa-share-nodes"></i> Nginx</span>
+                            <span class="skill-pill"><i class="fas fa-microchip"></i> Gunicorn</span>
+                            <span class="skill-pill"><i class="fab fa-docker"></i> Docker</span>
+                            <span class="skill-pill"><i class="fab fa-git-alt"></i> Git</span>
+                            <span class="skill-pill"><i class="fab fa-github"></i> GitHub</span>
+                            <span class="skill-pill"><i class="fas fa-sliders"></i> Env & Deployment Config</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 5: Security -->
+                    <div class="skill-category-card">
+                        <div class="category-card-header">
+                            <div class="category-icon-wrap icon-sec">
+                                <i class="fas fa-shield-halved"></i>
+                            </div>
+                            <h3>Security & Hardening</h3>
+                        </div>
+                        <div class="skill-pills-wrap">
+                            <span class="skill-pill"><i class="fas fa-bug"></i> Burp Suite</span>
+                            <span class="skill-pill"><i class="fas fa-shield-virus"></i> OWASP ZAP</span>
+                            <span class="skill-pill"><i class="fas fa-list-check"></i> OWASP Top 10</span>
+                            <span class="skill-pill"><i class="fas fa-key"></i> Authentication & Auth</span>
+                            <span class="skill-pill"><i class="fas fa-user-shield"></i> RBAC</span>
+                            <span class="skill-pill"><i class="fas fa-lock"></i> CSRF/XSS Mitigation</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 6: Practices & Frontend -->
+                    <div class="skill-category-card">
+                        <div class="category-card-header">
+                            <div class="category-icon-wrap icon-prac">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Frontend & Practices</h3>
+                        </div>
+                        <div class="skill-pills-wrap">
+                            <span class="skill-pill"><i class="fab fa-react"></i> React</span>
+                            <span class="skill-pill"><i class="fas fa-n"></i> Next.js</span>
+                            <span class="skill-pill"><i class="fas fa-wind"></i> Tailwind CSS</span>
+                            <span class="skill-pill"><i class="fab fa-html5"></i> HTML5 / CSS3</span>
+                            <span class="skill-pill"><i class="fas fa-shapes"></i> OOP & MVT/MVC</span>
+                            <span class="skill-pill"><i class="fas fa-paper-plane"></i> Postman API Testing</span>
+                            <span class="skill-pill"><i class="fas fa-users-gear"></i> Agile & Code Review</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-folder-open"></i> Portfolio Work</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">
+                        Production-grade applications highlighting database architecture, API security, and full-stack integration.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    
+                    <!-- Project 1: Kishan-Hub -->
+                    <div class="project-card">
+                        <div>
+                            <div class="project-top">
+                                <span class="project-badge-type">Full-Stack Platform</span>
+                                <div class="project-links-top">
+                                    <a href="https://github.com/kcNares/Kishan-Hub" target="_blank" class="icon-link-btn" title="View Kishan-Hub on GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Kishan-Hub — Agricultural Tool Rental Platform</h3>
+                            <p class="project-desc">
+                                A comprehensive two-sided rental marketplace connecting farmers with equipment owners. Features an interactive seller inventory dashboard, automated shop approval workflows, and customized operational tooling.
+                            </p>
+                            <ul class="project-feature-bullets">
+                                <li><i class="fas fa-check"></i> Built a two-sided rental marketplace with seller dashboard for tool inventory management.</li>
+                                <li><i class="fas fa-check"></i> Developed shop approval workflow with admin review and status notification triggers.</li>
+                                <li><i class="fas fa-check"></i> Implemented authentication, role-based authorization, session handling, and customized Django Admin.</li>
+                                <li><i class="fas fa-check"></i> Engineered relational schema in PostgreSQL for equipment availability and bookings.</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">RBAC</span>
+                            <span class="tech-tag">Django Admin</span>
+                            <span class="tech-tag">Session Auth</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: News Portal -->
+                    <div class="project-card">
+                        <div>
+                            <div class="project-top">
+                                <span class="project-badge-type">Content Management System</span>
+                                <div class="project-links-top">
+                                    <a href="https://github.com/kcNares/News-Portal" target="_blank" class="icon-link-btn" title="View News Portal on GitHub">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">News Portal — Content Management System</h3>
+                            <p class="project-desc">
+                                A high-performance content publishing platform with role-segregated editorial pipelines, category taxonomies, and rich article moderation dashboards.
+                            </p>
+                            <ul class="project-feature-bullets">
+                                <li><i class="fas fa-check"></i> Built full CRUD for articles, categories, and authors with moderation & publishing dashboards.</li>
+                                <li><i class="fas fa-check"></i> Applied clean URL routing, template inheritance, reusable component views, and form validation.</li>
+                                <li><i class="fas fa-check"></i> Implemented CSRF-protected form handling, secure media uploads, and permission gates.</li>
+                                <li><i class="fas fa-check"></i> Optimized ORM queries with prefetch/select_related for high article throughput.</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">ORM Optimization</span>
+                            <span class="tech-tag">CSRF Hardened</span>
+                            <span class="tech-tag">CMS Architecture</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- GitHub Banner -->
+                <div class="github-banner">
+                    <div class="github-banner-info">
                         <i class="fab fa-github"></i>
+                        <div>
+                            <h4>Explore More Repositories on GitHub</h4>
+                            <p>Check out active repositories, backend scripts, scrapers, and open-source contributions.</p>
+                        </div>
+                    </div>
+                    <a href="https://github.com/kcNares" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> Visit github.com/kcNares
                     </a>
-                    <a href="mailto:kcnaresh72@gmail.com" title="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="tel:+977-9840790473" title="Phone">
-                        <i class="fas fa-phone"></i>
-                    </a>
                 </div>
             </div>
-            <!-- <div class="hero-image">
-                <div class="image-wrapper">
-                    <img src="images/profile.jpg" alt="Naresh Kumar KC">
-                    <div class="image-border"></div>
-                </div>
-            </div> -->
-        </div>
-        <div class="scroll-indicator">
-            <a href="#about">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-card">
-                    <div class="about-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <h3>Background</h3>
-                    <p>BCA graduate from Kathford International College with strong academic foundation in computer science and software development.</p>
+        <!-- Education & Certifications Section -->
+        <section id="education" class="education-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-graduation-cap"></i> Academic & Qualifications</span>
+                    <h2 class="section-title">Education & Certifications</h2>
+                    <p class="section-subtitle">
+                        Strong computer science foundation and specialized software engineering training.
+                    </p>
                 </div>
-                <div class="about-card">
-                    <div class="about-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>What I Do</h3>
-                    <p>I specialize in backend web development using Python and Django, building database-driven applications with clean, maintainable code.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Goal</h3>
-                    <p>Seeking opportunities as a Python/Django Developer or Intern to apply my skills and grow as a professional developer.</p>
-                </div>
-            </div>
-            <div class="about-stats">
-                <div class="stat">
-                    <span class="stat-number" data-target="4">0</span>
-                    <span class="stat-label">Projects</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="50">0</span>
-                    <span class="stat-label">Commits</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="6">0</span>
-                    <span class="stat-label">Technologies</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Python</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
+                <div class="education-grid">
+                    <!-- Card 1: Degree -->
+                    <div class="edu-card">
+                        <div class="edu-icon-wrap">
+                            <i class="fas fa-user-graduate"></i>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>JavaScript (Basic)</span>
-                                <span>50%</span>
+                        <div class="edu-body">
+                            <h3>Bachelor of Computer Application (BCA)</h3>
+                            <p class="edu-institution">Kathford International College of Engineering & Management</p>
+                            <div class="edu-meta">
+                                <span><i class="fas fa-calendar-alt"></i> 2020 – 2025</span>
+                                <span><i class="fas fa-location-dot"></i> Balkumari, Kathmandu</span>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="50"></div>
-                            </div>
+                            <p>Focused on core computer science fundamentals, data structures and algorithms, relational database management systems (RDBMS), object-oriented programming, and web architecture.</p>
                         </div>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Django</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Django REST Framework</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Database</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>SQLite</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>PostgreSQL</span>
-                                <span>60%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="60"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Others</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Git & GitHub</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span>HTML & CSS</span>
-                                <span>70%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="concepts">
-                <h3>Core Concepts</h3>
-                <div class="concept-tags">
-                    <span class="tag">OOP</span>
-                    <span class="tag">MVC/MVT</span>
-                    <span class="tag">CRUD Operations</span>
-                    <span class="tag">REST APIs</span>
-                    <span class="tag">User Authentication</span>
-                    <span class="tag">Form Handling</span>
-                    <span class="tag">Django ORM</span>
-                    <span class="tag">URL Routing</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/kcNares/Kishan-Hub" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
+                    <!-- Card 2: Certification -->
+                    <div class="edu-card">
+                        <div class="edu-icon-wrap">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="edu-body">
+                            <h3>Python — Django Professional Certification</h3>
+                            <p class="edu-institution">Broadway Infosys Pvt. Ltd.</p>
+                            <div class="edu-meta">
+                                <span><i class="fas fa-calendar-alt"></i> Dec 2024 – Feb 2025</span>
+                                <span><i class="fas fa-award"></i> Professional Credential</span>
+                            </div>
+                            <p>Intensive hands-on professional course covering Django MVT architecture, Django REST Framework API design, ORM querying, authentication, and secure web application development.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section (Preview & Interactive Actions) -->
+        <section id="resume" class="resume-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-file-contract"></i> Official Document</span>
+                    <h2 class="section-title">Curriculum Vitae / Resume</h2>
+                    <p class="section-subtitle">
+                        View or download the complete, current version of my resume formatted for recruiters and hiring managers.
+                    </p>
+                </div>
+
+                <div class="resume-showcase-box">
+                    <div class="resume-showcase-grid">
+                        
+                        <!-- Left Details -->
+                        <div class="resume-info-left">
+                            <h3>Naresh Kumar K.C. &mdash; Resume</h3>
+                            <p>
+                                Access my up-to-date resume highlighting professional backend internship experience, technical skill matrix (Python, Django, DRF, PostgreSQL, Linux VPS, OWASP), featured projects, and BCA degree credentials.
+                            </p>
+
+                            <div class="resume-feature-pills">
+                                <span class="resume-feature-pill"><i class="fas fa-check"></i> ATS-Friendly Layout</span>
+                                <span class="resume-feature-pill"><i class="fas fa-check"></i> Linux VPS & Nginx Verified</span>
+                                <span class="resume-feature-pill"><i class="fas fa-check"></i> OWASP & Burp Suite Tested</span>
+                                <span class="resume-feature-pill"><i class="fas fa-check"></i> Ready for PDF Export</span>
+                            </div>
+
+                            <div class="resume-actions-group">
+                                <button class="btn btn-primary open-resume-trigger">
+                                    <i class="fas fa-eye"></i> Open Interactive Resume
+                                </button>
+                                <a href="resume/resume.html" target="_blank" class="btn btn-secondary">
+                                    <i class="fas fa-arrow-up-right-from-square"></i> Dedicated Resume Page
+                                </a>
+                                <a href="resume/resume.html?print=true" target="_blank" class="btn btn-outline">
+                                    <i class="fas fa-download"></i> Download / Print PDF
                                 </a>
                             </div>
                         </div>
-                        <div class="project-icon">
-                            <i class="fas fa-tractor"></i>
+
+                        <!-- Right Paper Preview (Clickable to open modal) -->
+                        <div class="resume-paper-preview open-resume-trigger" title="Click to open full interactive resume">
+                            <div class="paper-header">
+                                <h4>NARESH KUMAR K.C.</h4>
+                                <p class="paper-subtitle">Backend Developer — Python | Django | REST APIs</p>
+                                <p style="font-size:0.68rem; color:#64748b;">Kathmandu, Nepal &middot; +977-9840790473 &middot; nareshkumarkc25@gmail.com</p>
+                            </div>
+                            
+                            <p class="paper-section-title">SUMMARY</p>
+                            <p style="font-size:0.68rem; color:#334155; margin-bottom:6px;">
+                                Python and Django developer, focused on backend work — REST APIs, authentication and permissions, and the data model underneath them...
+                            </p>
+
+                            <p class="paper-section-title">TECHNICAL SKILLS</p>
+                            <p style="font-size:0.68rem; color:#334155;"><strong>Languages:</strong> Python, JavaScript, TypeScript, SQL</p>
+                            <p style="font-size:0.68rem; color:#334155;"><strong>Backend:</strong> Django, Django REST Framework, FastAPI, Node.js, REST API design</p>
+                            <p style="font-size:0.68rem; color:#334155;"><strong>Databases:</strong> PostgreSQL, Redis, SQLite, Django ORM, relational data modelling</p>
+                            <p style="font-size:0.68rem; color:#334155;"><strong>Infrastructure:</strong> Linux VPS, Nginx, Gunicorn, Docker, Git, GitHub</p>
+                            <p style="font-size:0.68rem; color:#334155;"><strong>Security:</strong> Burp Suite, OWASP ZAP, OWASP Top 10, authentication &amp; authorization</p>
+
+                            <button class="btn btn-primary btn-sm paper-overlay-btn">
+                                <i class="fas fa-expand"></i> Click to Open Full Resume
+                            </button>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Kishan-Hub</h3>
-                        <p>Agricultural tool rental platform built with Django. Features seller dashboard, shop approval workflow, and comprehensive admin management system.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Django</span>
-                            <span>PostgreSQL</span>
-                        </div>
+
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/kcNares/News-Portal" target="_blank" class="project-link">
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag"><i class="fas fa-envelope-open-text"></i> Connect</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">
+                        Available immediately for full-time backend and Django engineering roles. Let's discuss your team's needs!
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Left: Contact Details -->
+                    <div class="contact-info-cards">
+                        
+                        <!-- Email -->
+                        <div class="contact-card-item">
+                            <div class="contact-card-left">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-card-text">
+                                    <h4>Email Address</h4>
+                                    <a href="mailto:nareshkumarkc25@gmail.com">nareshkumarkc25@gmail.com</a>
+                                </div>
+                            </div>
+                            <button class="copy-btn copy-trigger" data-copy="nareshkumarkc25@gmail.com" title="Copy email">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="contact-card-item">
+                            <div class="contact-card-left">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-card-text">
+                                    <h4>Phone / Mobile</h4>
+                                    <a href="tel:+9779840790473">+977-9840790473</a>
+                                </div>
+                            </div>
+                            <button class="copy-btn copy-trigger" data-copy="+9779840790473" title="Copy phone number">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="contact-card-item">
+                            <div class="contact-card-left">
+                                <div class="contact-card-icon">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div class="contact-card-text">
+                                    <h4>Location & Availability</h4>
+                                    <p>Kathmandu, Nepal &middot; Immediate</p>
+                                </div>
+                            </div>
+                            <button class="copy-btn copy-trigger" data-copy="Kathmandu, Nepal" title="Copy location">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <!-- WhatsApp -->
+                        <div class="contact-card-item">
+                            <div class="contact-card-left">
+                                <div class="contact-card-icon" style="background: rgba(37, 211, 102, 0.15); color: #25d366;">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="contact-card-text">
+                                    <h4>WhatsApp Direct</h4>
+                                    <a href="https://wa.me/9779840790473" target="_blank">Chat on WhatsApp</a>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/9779840790473" target="_blank" class="copy-btn" title="Open WhatsApp">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+
+                        <!-- GitHub -->
+                        <div class="contact-card-item">
+                            <div class="contact-card-left">
+                                <div class="contact-card-icon">
                                     <i class="fab fa-github"></i>
-                                </a>
+                                </div>
+                                <div class="contact-card-text">
+                                    <h4>GitHub Profile</h4>
+                                    <a href="https://github.com/kcNares" target="_blank">github.com/kcNares</a>
+                                </div>
                             </div>
+                            <a href="https://github.com/kcNares" target="_blank" class="copy-btn" title="Open GitHub">
+                                <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
-                        <div class="project-icon">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>News Portal</h3>
-                        <p>Full-featured news portal with user authentication, CRUD operations, Django ORM integration, and admin dashboard for content management.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Django</span>
-                            <span>SQLite</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/kcNares/scrapper-project" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="project-icon">
-                            <i class="fas fa-spider"></i>
-                        </div>
                     </div>
-                    <div class="project-content">
-                        <h3>Web Scraper</h3>
-                        <p>Python-based web scraping project for automated data extraction from websites with clean data processing and storage capabilities.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>BeautifulSoup</span>
-                            <span>Requests</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/kcNares/Simple_Todo_List" target="_blank" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
+                    <!-- Right: Form -->
+                    <div class="contact-form-card">
+                        <h3>Send a Direct Message</h3>
+                        <p>Fill out the form below to reach out directly for hiring inquiries or project collaboration.</p>
+
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe / Hiring Manager" required>
                             </div>
-                        </div>
-                        <div class="project-icon">
-                            <i class="fas fa-tasks"></i>
-                        </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. name@company.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input" placeholder="e.g. Backend Developer Role / Project Inquiry" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Hi Naresh, we would love to discuss a Backend / Django opportunity with you..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
                     </div>
-                    <div class="project-content">
-                        <h3>Simple Todo List</h3>
-                        <p>Task management application with full CRUD functionality, allowing users to create, update, and track their daily tasks efficiently.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>Django</span>
-                            <span>SQLite</span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
-            <div class="github-stats">
-                <a href="https://github.com/kcNares" target="_blank" class="btn btn-primary">
-                    <i class="fab fa-github"></i> View All on GitHub
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Section -->
-    <section id="resume" class="resume">
-        <div class="container">
-            <h2 class="section-title">Resume</h2>
-            <div class="resume-content">
-                <div class="resume-column">
-                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h4>Bachelor of Computer Application (BCA)</h4>
-                                <p class="institution">Kathford International College of Engineering and Management, Nepal</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h4>+2 Science (Higher Secondary)</h4>
-                                <p class="institution">NASA International College, Nepal</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h4>School Level (Grade 1-10)</h4>
-                                <p class="institution">Soojung Higher Secondary School, Nepal</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="resume-column">
-                    <h3><i class="fas fa-heart"></i> Soft Skills</h3>
-                    <div class="soft-skills">
-                        <div class="soft-skill">
-                            <i class="fas fa-brain"></i>
-                            <span>Problem Solving</span>
-                        </div>
-                        <div class="soft-skill">
-                            <i class="fas fa-lightbulb"></i>
-                            <span>Logical Thinking</span>
-                        </div>
-                        <div class="soft-skill">
-                            <i class="fas fa-users"></i>
-                            <span>Team Collaboration</span>
-                        </div>
-                        <div class="soft-skill">
-                            <i class="fas fa-clock"></i>
-                            <span>Time Management</span>
-                        </div>
-                        <div class="soft-skill">
-                            <i class="fas fa-comments"></i>
-                            <span>Communication</span>
-                        </div>
-                        <div class="soft-skill">
-                            <i class="fas fa-book-reader"></i>
-                            <span>Willingness to Learn</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="resume-info">
-                <div class="info-cards">
-                    <div class="info-card">
-                        <i class="fas fa-user-tie"></i>
-                        <h4>Career Level</h4>
-                        <p>Fresher / Entry-Level</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-briefcase"></i>
-                        <h4>Availability</h4>
-                        <p>Open to Internship & Junior Roles</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-building"></i>
-                        <h4>Work Preference</h4>
-                        <p>Onsite / Remote / Hybrid</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-language"></i>
-                        <h4>Languages</h4>
-                        <p>Nepali, English</p>
-                    </div>
-                </div>
-            </div>
-            <div class="download-resume">
-                <a href="resume/resume.html" class="btn btn-primary">
-                    <i class="fas fa-file-alt"></i> View Full Resume
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="contact-subtitle">
-            I'm currently looking for new opportunities. Let's connect!
-        </p>
-
-        <div class="contact-content">
-
-            <!-- Contact Info -->
-            <div class="contact-info">
-
-                <!-- Email -->
-                <div class="contact-item">
-                    <a href="mailto:kcnaresh72@gmail.com"
-                        style="text-decoration:none; color:inherit; display:flex; align-items:center; width:100%;">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>kcnaresh72@gmail.com</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Phone -->
-                <div class="contact-item">
-                    <a style="text-decoration:none; color:inherit; display:flex; align-items:center; width:100%;">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>+977-9840790473</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Location -->
-                <div class="contact-item">
-                    <a style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:22px; width:100%;">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>Kathmandu, Nepal</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- GitHub -->
-                <div class="contact-item">
-                    <a href="https://github.com/kcNares" target="_blank"
-                        style="text-decoration:none; color:inherit; display:flex; align-items:center; width:100%;">
-                        <div class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>GitHub</h4>
-                            <p>github.com/kcNares</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- WhatsApp -->
-                <div class="contact-item">
-                    <a href="https://wa.me/9779840790473" target="_blank"
-                        style="text-decoration:none; color:inherit; display:flex; align-items:center; width:100%;">
-                        <div class="contact-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>WhatsApp</h4>
-                            <p>Chat on WhatsApp</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Viber -->
-                <div class="contact-item">
-                    <a href="viber://chat?number=9779840790473"
-                        style="text-decoration:none; color:inherit; display:flex; align-items:center; width:100%;">
-                        <div class="contact-icon">
-                            <i class="fab fa-viber"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Viber</h4>
-                            <p>Chat on Viber</p>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- Contact Form -->
-            <form class="contact-form" id="contact-form">
-
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                </div>
-
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-
-                <div class="form-group">
-                    <input type="text" name="subject" placeholder="Subject" required>
-                </div>
-
-                <div class="form-group">
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-
-            </form>
-
-        </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#">Naresh<span>.dev</span></a>
-                    <p>Python & Django Developer</p>
+                <div class="footer-brand">
+                    Naresh<span style="color: var(--accent-cyan);">.dev</span>
+                    <p style="font-size:0.85rem; color:var(--text-muted); font-weight:400; margin-top:4px;">
+                        Backend Developer &mdash; Python, Django, REST APIs &amp; Linux VPS
+                    </p>
                 </div>
-                <div class="footer-social">
-                    <a href="https://github.com/kcNares" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:kcnaresh72@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="tel:+977-9840790473"><i class="fas fa-phone"></i></a>
+                
+                <div class="footer-socials">
+                    <a href="https://github.com/kcNares" target="_blank" class="social-icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:nareshkumarkc25@gmail.com" class="social-icon-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+9779840790473" class="social-icon-btn" title="Phone"><i class="fas fa-phone"></i></a>
+                    <a href="https://wa.me/9779840790473" target="_blank" class="social-icon-btn" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2026 Naresh Kumar KC. All rights reserved.</p>
+                <p>&copy; 2026 Naresh Kumar K.C. &middot; Built with modern web standards.</p>
             </div>
         </div>
     </footer>
 
+    <!-- =========================================================================
+         RESUME MODAL VIEWER (Exact Resume Format Replication)
+         ========================================================================= -->
+    <div id="resume-modal" class="resume-modal" aria-hidden="true" role="dialog">
+        <div class="resume-modal-backdrop" id="modal-backdrop"></div>
+        <div class="resume-modal-dialog">
+            
+            <!-- Toolbar -->
+            <div class="resume-modal-toolbar">
+                <div class="modal-toolbar-title">
+                    <i class="fas fa-file-lines" style="color: var(--accent-cyan);"></i>
+                    <span>Naresh Kumar K.C. &mdash; Resume</span>
+                </div>
+                <div class="modal-toolbar-actions">
+                    <a href="resume/resume.html" target="_blank" class="btn btn-secondary btn-sm" title="Open standalone page">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Open in New Tab
+                    </a>
+                    <button class="btn btn-primary btn-sm" onclick="window.open('resume/resume.html?print=true', '_blank')">
+                        <i class="fas fa-print"></i> Print / PDF
+                    </button>
+                    <button class="modal-close-btn" id="modal-close-btn" title="Close (Esc)">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Resume Content Body -->
+            <div class="resume-modal-content">
+                <div class="modal-resume-doc">
+                    
+                    <!-- Header -->
+                    <div class="m-resume-header">
+                        <h2>NARESH KUMAR K.C.</h2>
+                        <p class="m-resume-subtitle">Backend Developer &mdash; Python | Django | REST APIs</p>
+                        <div class="m-resume-contact">
+                            <span>Kathmandu, Nepal</span>
+                            <span>&bull;</span>
+                            <a href="tel:+9779840790473">+977-9840790473</a>
+                            <span>&bull;</span>
+                            <a href="mailto:nareshkumarkc25@gmail.com">nareshkumarkc25@gmail.com</a>
+                            <span>&bull;</span>
+                            <a href="https://github.com/kcNares" target="_blank">github.com/kcNares</a>
+                            <span>&bull;</span>
+                            <a href="https://kcnares.github.io/portfolio" target="_blank">kcnares.github.io/portfolio</a>
+                        </div>
+                    </div>
+
+                    <!-- Summary -->
+                    <div class="m-section">
+                        <h2 class="m-section-title">SUMMARY</h2>
+                        <p class="m-summary-text">
+                            Python and Django developer, focused on backend work &mdash; REST APIs, authentication and permissions, and the data model underneath them. Comfortable stepping into the frontend when a feature needs it, and used to running the Linux servers the work sits on. Tests applications with Burp Suite and OWASP ZAP, on the view that a broken permission check is better found by the person who wrote it. Interested in how systems hold up once real users are on them.
+                        </p>
+                    </div>
+
+                    <!-- Technical Skills -->
+                    <div class="m-section">
+                        <h2 class="m-section-title">TECHNICAL SKILLS</h2>
+                        <div class="m-skills-block">
+                            <p><strong>Languages:</strong> Python, JavaScript, TypeScript, SQL</p>
+                            <p><strong>Backend:</strong> Django, Django REST Framework, FastAPI, Node.js, REST API design</p>
+                            <p><strong>Frontend:</strong> React, Next.js, Tailwind CSS, HTML5, CSS3</p>
+                            <p><strong>Databases:</strong> PostgreSQL, Redis, SQLite, Django ORM, relational data modelling</p>
+                            <p><strong>Infrastructure:</strong> Linux VPS, Nginx, Gunicorn, Docker, Git, GitHub, environment &amp; deployment configuration</p>
+                            <p><strong>Security:</strong> Burp Suite, OWASP ZAP, OWASP Top 10, authentication &amp; authorization, RBAC, CSRF/XSS mitigation</p>
+                            <p><strong>Practices:</strong> OOP, MVT/MVC, code review, Postman API testing, Agile collaboration</p>
+                        </div>
+                    </div>
+
+                    <!-- Professional Experience -->
+                    <div class="m-section">
+                        <h2 class="m-section-title">PROFESSIONAL EXPERIENCE</h2>
+                        <div>
+                            <div class="m-item-header">
+                                <span>Backend Developer Intern</span>
+                                <span>June 07, 2026 – September 06, 2026</span>
+                            </div>
+                            <div class="m-item-sub">
+                                <span>AI Education and Technologies</span>
+                                <span>Kathmandu, Nepal</span>
+                            </div>
+                            <ul class="m-bullet-list">
+                                <li>Built and maintained REST APIs in Django and Django REST Framework for core booking and dashboard systems, serving web and mobile application clients across multiple user roles.</li>
+                                <li>Implemented role-based access control and authentication flows separating admin, staff, and customer permissions, preventing unauthorized access to restricted API endpoints.</li>
+                                <li>Designed relational schemas in PostgreSQL for booking and availability logic, including state transitions and double-booking prevention.</li>
+                                <li>Deployed and maintained applications on Linux VPS using Nginx and Gunicorn, handling domain setup, SSL certificates, environment variables, and release configuration.</li>
+                                <li>Ran security assessments with Burp Suite and OWASP ZAP against internal applications, identifying and remediating issues including broken access control, insecure headers, and CSRF gaps before release.</li>
+                                <li>Developed frontend interfaces in React, Next.js, and Django templates to integrate directly with the APIs, reducing handoff delays between backend and frontend work.</li>
+                                <li>Collaborated in code reviews and Git-based workflows, contributing merged pull requests over the internship.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Projects -->
+                    <div class="m-section">
+                        <h2 class="m-section-title">PROJECTS</h2>
+                        
+                        <!-- Project 1 -->
+                        <div style="margin-bottom: 12px;">
+                            <div class="m-item-header">
+                                <span>Kishan-Hub — Agricultural Tool Rental Platform</span>
+                                <span>Django, PostgreSQL</span>
+                            </div>
+                            <ul class="m-bullet-list">
+                                <li>Built a two-sided rental marketplace with a seller dashboard for tool inventory management and a shop approval workflow with admin review and notifications.</li>
+                                <li>Implemented authentication, role-based authorization, session handling, and a customized Django Admin for operational management.</li>
+                            </ul>
+                            <a href="https://github.com/kcNares/Kishan-Hub" target="_blank" class="m-project-link">
+                                <i class="fab fa-github"></i> github.com/kcNares/Kishan-Hub
+                            </a>
+                        </div>
+
+                        <!-- Project 2 -->
+                        <div>
+                            <div class="m-item-header">
+                                <span>News Portal — Content Management System</span>
+                                <span>Django, PostgreSQL</span>
+                            </div>
+                            <ul class="m-bullet-list">
+                                <li>Built full CRUD for articles, categories, and authors with a custom moderation and publishing dashboard.</li>
+                                <li>Applied clean URL routing, template inheritance, reusable component views, and CSRF-protected from validation.</li>
+                            </ul>
+                            <a href="https://github.com/kcNares/News-Portal" target="_blank" class="m-project-link">
+                                <i class="fab fa-github"></i> github.com/kcNares/News-Portal
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="m-section">
+                        <h2 class="m-section-title">EDUCATION</h2>
+                        <div>
+                            <div class="m-item-header">
+                                <span>Bachelor of Computer Application (BCA)</span>
+                                <span>2020 – 2025</span>
+                            </div>
+                            <div class="m-item-sub">
+                                <span>Kathford International College of Engineering &amp; Management</span>
+                                <span>Balkumari, Kathmandu</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Certifications & Additional -->
+                    <div class="m-section" style="margin-bottom: 0;">
+                        <h2 class="m-section-title">CERTIFICATIONS &amp; ADDITIONAL</h2>
+                        <ul class="m-bullet-list">
+                            <li><strong>Python — Django</strong>, Broadway Infosys Pvt. Ltd. (December 2024 – February 2025)</li>
+                            <li><strong>Languages:</strong> Nepali (native), English (professional working proficiency) &middot; <strong>Availability:</strong> Immediate, open to on-site, hybrid, or remote roles</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,259 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Naresh Kumar KC | Python & Django Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Naresh Kumar K.C. - Resume | Backend Developer</title>
+    <meta name="description" content="Resume of Naresh Kumar K.C. - Backend Developer specializing in Python, Django, DRF, PostgreSQL, Linux VPS, and OWASP security.">
     <link rel="stylesheet" href="../css/resume.css">
-    <link rel="icon" type="image/png" href="../images/logon.jpg">
-    <link rel="apple-touch-icon" href="../images/logon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="../images/logon.jpg">
 </head>
 <body>
-    <div class="resume-container">
-        <!-- Header --> 
+
+    <!-- Floating Action Toolbar -->
+    <div class="action-bar">
+        <a href="../index.html" class="action-btn btn-back">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <button class="action-btn btn-print" onclick="window.print()">
+            <i class="fas fa-print"></i> Download / Print PDF
+        </button>
+    </div>
+
+    <!-- ATS-Optimized Resume Document Container -->
+    <main class="resume-paper" id="resume-document">
+        
+        <!-- HEADER -->
         <header class="resume-header">
-            <img src="../images/profile.jpg" alt="Naresh Kumar KC" class="header-photo">
-            <div class="header-info">
-                <h1>Naresh Kumar KC</h1>
-                <p class="title">Python & Django Developer (Entry-Level)</p>
-                <div class="contact-row">
-                    <a href="mailto:kcnaresh72@gmail.com">
-                        <i class="fas fa-envelope"></i> kcnaresh72@gmail.com
-                    </a>
-                    <a href="tel:+977-9840790473">
-                        <i class="fas fa-phone"></i> +977-9840790473
-                    </a>
-                    <span>
-                        <i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal
-                    </span>
-                    <a href="https://github.com/kcNares" target="_blank">
-                        <i class="fab fa-github"></i> github.com/kcNares
-                    </a>
-                </div>
+            <h1>NARESH KUMAR K.C.</h1>
+            <p class="candidate-title">Backend Developer &mdash; Python | Django | REST APIs</p>
+            <div class="contact-info-row">
+                <span>Kathmandu, Nepal</span>
+                <span class="separator">|</span>
+                <a href="tel:+9779840790473">+977-9840790473</a>
+                <span class="separator">|</span>
+                <a href="mailto:nareshkumarkc25@gmail.com">nareshkumarkc25@gmail.com</a>
+                <span class="separator">|</span>
+                <a href="https://github.com/kcNares" target="_blank">github.com/kcNares</a>
+                <span class="separator">|</span>
+                <a href="https://kcnares.github.io/portfolio" target="_blank">kcnares.github.io/portfolio</a>
             </div>
         </header>
 
-        <!-- Body -->
-        <div class="resume-body">
-            <!-- Main Content -->
-            <main class="main-content">
-                <!-- Professional Summary -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fas fa-user"></i> Professional Summary
-                    </h2>
-                    <p class="summary-text">
-                        Entry-level Python and Django Developer with a strong academic foundation and hands-on experience through personal and academic projects. Skilled in backend web development, database management, and version control using GitHub. Highly motivated, quick learner, and eager to begin a career as a Python/Django Developer or Intern. Passionate about building scalable backend systems and REST APIs.
-                    </p>
-                </section>
+        <!-- SUMMARY -->
+        <section class="resume-section">
+            <h2 class="section-heading">SUMMARY</h2>
+            <p class="summary-paragraph">
+                Python and Django developer, focused on backend work &mdash; REST APIs, authentication and permissions, and the data model underneath them. Comfortable stepping into the frontend when a feature needs it, and used to running the Linux servers the work sits on. Tests applications with Burp Suite and OWASP ZAP, on the view that a broken permission check is better found by the person who wrote it. Interested in how systems hold up once real users are on them.
+            </p>
+        </section>
 
-                <!-- Projects -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fas fa-code"></i> Projects
-                    </h2>
+        <!-- TECHNICAL SKILLS -->
+        <section class="resume-section">
+            <h2 class="section-heading">TECHNICAL SKILLS</h2>
+            <div class="skills-container">
+                <div class="skill-row">
+                    <strong>Languages:</strong> Python, JavaScript, TypeScript, SQL
+                </div>
+                <div class="skill-row">
+                    <strong>Backend:</strong> Django, Django REST Framework, FastAPI, Node.js, REST API design
+                </div>
+                <div class="skill-row">
+                    <strong>Frontend:</strong> React, Next.js, Tailwind CSS, HTML5, CSS3
+                </div>
+                <div class="skill-row">
+                    <strong>Databases:</strong> PostgreSQL, Redis, SQLite, Django ORM, relational data modelling
+                </div>
+                <div class="skill-row">
+                    <strong>Infrastructure:</strong> Linux VPS, Nginx, Gunicorn, Docker, Git, GitHub, environment &amp; deployment configuration
+                </div>
+                <div class="skill-row">
+                    <strong>Security:</strong> Burp Suite, OWASP ZAP, OWASP Top 10, authentication &amp; authorization, RBAC, CSRF/XSS mitigation
+                </div>
+                <div class="skill-row">
+                    <strong>Practices:</strong> OOP, MVT/MVC, code review, Postman API testing, Agile collaboration
+                </div>
+            </div>
+        </section>
 
-                    <div class="project-item">
-                        <h3 class="project-title">
-                            Kishan-Hub - Agricultural Tool Rental Platform
-                            <a href="https://github.com/kcNares/Kishan-Hub" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </h3>
-                        <p class="project-description">Django platform for renting agricultural tools with comprehensive management features.</p>
-                        <ul class="project-features">
-                            <li>Seller dashboard for tool management</li>
-                            <li>Shop approval workflow system</li>
-                            <li>Admin management interface</li>
-                            <li>User authentication and authorization</li>
-                        </ul>
-                    </div>
+        <!-- PROFESSIONAL EXPERIENCE -->
+        <section class="resume-section">
+            <h2 class="section-heading">PROFESSIONAL EXPERIENCE</h2>
+            
+            <div class="entry-block">
+                <div class="entry-header">
+                    <span>Backend Developer Intern</span>
+                    <span>June 07, 2026 – September 06, 2026</span>
+                </div>
+                <div class="entry-sub-header">
+                    <span>AI Education and Technologies</span>
+                    <span>Kathmandu, Nepal</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Built and maintained REST APIs in Django and Django REST Framework for core booking and dashboard systems, serving web and mobile application clients across multiple user roles.</li>
+                    <li>Implemented role-based access control and authentication flows separating admin, staff, and customer permissions, preventing unauthorized access to restricted API endpoints.</li>
+                    <li>Designed relational schemas in PostgreSQL for booking and availability logic, including state transitions and double-booking prevention.</li>
+                    <li>Deployed and maintained applications on Linux VPS using Nginx and Gunicorn, handling domain setup, SSL certificates, environment variables, and release configuration.</li>
+                    <li>Ran security assessments with Burp Suite and OWASP ZAP against internal applications, identifying and remediating issues including broken access control, insecure headers, and CSRF gaps before release.</li>
+                    <li>Developed frontend interfaces in React, Next.js, and Django templates to integrate directly with the APIs, reducing handoff delays between backend and frontend work.</li>
+                    <li>Collaborated in code reviews and Git-based workflows, contributing merged pull requests over the internship.</li>
+                </ul>
+            </div>
+        </section>
 
-                    <div class="project-item">
-                        <h3 class="project-title">
-                            News Portal - Django Web Application
-                            <a href="https://github.com/kcNares/News-Portal" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </h3>
-                        <p class="project-description">Full-featured news portal with content management capabilities.</p>
-                        <ul class="project-features">
-                            <li>User authentication and form handling</li>
-                            <li>CRUD operations with Django ORM</li>
-                            <li>Admin dashboard for content management</li>
-                            <li>Clean URL routing and templates</li>
-                        </ul>
-                    </div>
+        <!-- PROJECTS -->
+        <section class="resume-section">
+            <h2 class="section-heading">PROJECTS</h2>
 
-                    <div class="project-item">
-                        <h3 class="project-title">
-                            Web Scraper Project
-                            <a href="https://github.com/kcNares/scrapper-project" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </h3>
-                        <p class="project-description">Python-based web scraping tool for automated data extraction.</p>
-                        <ul class="project-features">
-                            <li>Automated data extraction from websites</li>
-                            <li>Clean data processing and storage</li>
-                        </ul>
-                    </div>
+            <!-- Project 1 -->
+            <div class="entry-block">
+                <div class="entry-header">
+                    <span>Kishan-Hub — Agricultural Tool Rental Platform</span>
+                    <span>Django, PostgreSQL</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Built a two-sided rental marketplace with a seller dashboard for tool inventory management and a shop approval workflow with admin review and notifications.</li>
+                    <li>Implemented authentication, role-based authorization, session handling, and a customized Django Admin for operational management.</li>
+                </ul>
+                <a href="https://github.com/kcNares/Kishan-Hub" target="_blank" class="project-repo-link">
+                    github.com/kcNares/Kishan-Hub
+                </a>
+            </div>
 
-                    <div class="project-item">
-                        <h3 class="project-title">
-                            Simple Todo List
-                            <a href="https://github.com/kcNares/Simple_Todo_List" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </h3>
-                        <p class="project-description">Task management application with CRUD functionality.</p>
-                        <ul class="project-features">
-                            <li>Create, update, delete tasks</li>
-                            <li>Task tracking and management</li>
-                        </ul>
-                    </div>
-                </section>
+            <!-- Project 2 -->
+            <div class="entry-block">
+                <div class="entry-header">
+                    <span>News Portal — Content Management System</span>
+                    <span>Django, PostgreSQL</span>
+                </div>
+                <ul class="entry-bullets">
+                    <li>Built full CRUD for articles, categories, and authors with a custom moderation and publishing dashboard.</li>
+                    <li>Applied clean URL routing, template inheritance, reusable component views, and CSRF-protected from validation.</li>
+                </ul>
+                <a href="https://github.com/kcNares/News-Portal" target="_blank" class="project-repo-link">
+                    github.com/kcNares/News-Portal
+                </a>
+            </div>
+        </section>
 
-                <!-- Education -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fas fa-graduation-cap"></i> Education
-                    </h2>
+        <!-- EDUCATION -->
+        <section class="resume-section">
+            <h2 class="section-heading">EDUCATION</h2>
+            
+            <div class="entry-block">
+                <div class="entry-header">
+                    <span>Bachelor of Computer Application (BCA)</span>
+                    <span>2020 – 2025</span>
+                </div>
+                <div class="entry-sub-header">
+                    <span>Kathford International College of Engineering &amp; Management</span>
+                    <span>Balkumari, Kathmandu</span>
+                </div>
+            </div>
+        </section>
 
-                    <div class="education-item">
-                        <p class="education-degree">Bachelor of Computer Application (BCA)</p>
-                        <p class="education-school">Kathford International College of Engineering and Management, Nepal</p>
-                    </div>
+        <!-- CERTIFICATIONS & ADDITIONAL -->
+        <section class="resume-section" style="margin-bottom: 0;">
+            <h2 class="section-heading">CERTIFICATIONS &amp; ADDITIONAL</h2>
+            <ul class="entry-bullets">
+                <li><strong>Python — Django</strong>, Broadway Infosys Pvt. Ltd. (December 2024 – February 2025)</li>
+                <li><strong>Languages:</strong> Nepali (native), English (professional working proficiency) &middot; <strong>Availability:</strong> Immediate, open to on-site, hybrid, or remote roles</li>
+            </ul>
+        </section>
 
-                    <div class="education-item">
-                        <p class="education-degree">+2 Science (Higher Secondary Education)</p>
-                        <p class="education-school">NASA International College, Nepal</p>
-                    </div>
+    </main>
 
-                    <div class="education-item">
-                        <p class="education-degree">School Level (Grade 1-10)</p>
-                        <p class="education-school">Soojung Higher Secondary School, Nepal</p>
-                    </div>
-                </section>
-            </main>
-
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <!-- Technical Skills -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fas fa-laptop-code"></i> Technical Skills
-                    </h2>
-                    <div class="skills-grid">
-                        <div>
-                            <p class="skill-category-title">Languages</p>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Python</span>
-                                <span class="skill-tag">JavaScript</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="skill-category-title">Frameworks</p>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Django</span>
-                                <span class="skill-tag">Django REST</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="skill-category-title">Web</p>
-                            <div class="skill-tags">
-                                <span class="skill-tag">HTML</span>
-                                <span class="skill-tag">CSS</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="skill-category-title">Databases</p>
-                            <div class="skill-tags">
-                                <span class="skill-tag">SQLite</span>
-                                <span class="skill-tag">PostgreSQL</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="skill-category-title">Tools</p>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Git</span>
-                                <span class="skill-tag">GitHub</span>
-                                <span class="skill-tag">VS Code</span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="skill-category-title">Concepts</p>
-                            <div class="skill-tags">
-                                <span class="skill-tag">OOP</span>
-                                <span class="skill-tag">MVC/MVT</span>
-                                <span class="skill-tag">CRUD</span>
-                                <span class="skill-tag">REST APIs</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Soft Skills -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fas fa-heart"></i> Soft Skills
-                    </h2>
-                    <div class="soft-skills-grid">
-                        <span class="soft-skill-item">
-                            <i class="fas fa-brain"></i> Problem Solving
-                        </span>
-                        <span class="soft-skill-item">
-                            <i class="fas fa-lightbulb"></i> Logical Thinking
-                        </span>
-                        <span class="soft-skill-item">
-                            <i class="fas fa-users"></i> Team Collaboration
-                        </span>
-                        <span class="soft-skill-item">
-                            <i class="fas fa-clock"></i> Time Management
-                        </span>
-                        <span class="soft-skill-item">
-                            <i class="fas fa-comments"></i> Communication
-                        </span>
-                        <span class="soft-skill-item">
-                            <i class="fas fa-book-reader"></i> Willingness to Learn
-                        </span>
-                    </div>
-                </section>
-
-                <!-- Additional Info -->
-                <section class="section">
-                    <h2 class="section-title">
-                        <i class="fas fa-info-circle"></i> Additional Info
-                    </h2>
-                    <ul class="info-list">
-                        <li>
-                            <span class="info-label">Career Level</span>
-                            <span class="info-value">Fresher</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Availability</span>
-                            <span class="info-value">Immediate</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Work Type</span>
-                            <span class="info-value">Any</span>
-                        </li>
-                        <li>
-                            <span class="info-label">Languages</span>
-                            <span class="info-value">Nepali, English</span>
-                        </li>
-                    </ul>
-                </section>
-            </aside>
-        </div>
-    </div>
-
-    <!-- Buttons -->
-    <a href="../index.html" class="back-btn">
-        <i class="fas fa-arrow-left"></i> Back to Portfolio
-    </a>
-    <button class="print-btn" onclick="window.print()">
-        <i class="fas fa-download"></i> Download PDF
-    </button>
+    <!-- Auto-Print Handler Script for ?print=true parameter -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('print') === 'true') {
+                setTimeout(() => {
+                    window.print();
+                }, 400);
+            }
+        });
+    </script>
 </body>
 </html>
